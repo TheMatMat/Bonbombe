@@ -7,28 +7,38 @@ public class MusicIcon : MonoBehaviour
     public GameObject soundPanel;
     public Sprite spriteActive;
     public Sprite spriteInactive;
-    private SpriteRenderer sr;
+    //private SpriteRenderer sr;
+    public bool isActive = false;
 
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        //sr = GetComponent<SpriteRenderer>();
+        //sr.sprite = spriteActive;
     }
 
-    public void Appear()
+    public void changeState()
     {
-        soundPanel.SetActive(true);
-    }
-
-    public void Disappear()
-    {
-        soundPanel.SetActive(false);
+        if (!isActive)
+        {
+            soundPanel.SetActive(true);
+            isActive = true;
+        }
+        else
+        {
+            soundPanel.SetActive(false);
+            isActive = false;
+        }
     }
 
     public void SpriteSwitch(int value)
     {
-        if (value == 1)
-        {
-
-        }
+        //if (value == 1)
+        //{
+        //    sr.sprite = spriteActive;
+        //}
+        //if (value == 2)
+        //{
+        //    sr.sprite = spriteInactive;
+        //}
     }
 }

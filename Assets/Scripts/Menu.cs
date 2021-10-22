@@ -10,10 +10,12 @@ public class Menu : MonoBehaviour
     public void MenuStart()
     {
         SceneManager.LoadScene(nextScene);
+        Debug.Log("start");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("quit");
     }
 }
