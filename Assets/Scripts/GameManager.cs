@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
   public int points = 0;
+  public int health = 3;
 
   public static GameManager instance;
 
